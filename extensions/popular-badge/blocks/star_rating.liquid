@@ -7,10 +7,13 @@
   <img src="{{ "thumbs-up.png" | asset_img_url: '15x' }}" height="15" width="15" loading="lazy">
   {{ 'ratings.home.recommendationText' | t }}
 {% endif %}
-
+<div>
+  <h3> Hello App Again </h3>
+  <button onclick="alert('You Clicked it')">Click Me</button>
+ </div>
 {% schema %}
 {
-  "name": "Star Rating",
+  "name": "Badge App",
   "target": "section",
   "settings": [
     { "type": "product", "id": "product", "label": "product", "autofill": true },

@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "50962a9dbecfbb7afd2af58c50c2f2f4"
-application_url = "https://apart-ensemble-false-sole.trycloudflare.com"
+application_url = "https://kg-hungary-meet-toxic.trycloudflare.com"
 embedded = true
 name = "badge-app-remix"
 handle = "badge-app-remix"
@@ -27,9 +27,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://apart-ensemble-false-sole.trycloudflare.com/auth/callback",
-  "https://apart-ensemble-false-sole.trycloudflare.com/auth/shopify/callback",
-  "https://apart-ensemble-false-sole.trycloudflare.com/api/auth/callback"
+  "https://kg-hungary-meet-toxic.trycloudflare.com/auth/callback",
+  "https://kg-hungary-meet-toxic.trycloudflare.com/auth/shopify/callback",
+  "https://kg-hungary-meet-toxic.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]

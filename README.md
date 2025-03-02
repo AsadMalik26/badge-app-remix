@@ -18,6 +18,10 @@ Write the name: ** < name of your choice e.g. popular-badge >**
 
 Enter the password of your store. Then it will configure host theme for your extension app
 
+deploy the extension app changes using:
+```shell
+shopify app deploy
+```
 ## Quick start
 
 ### Prerequisites
