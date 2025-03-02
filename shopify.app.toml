@@ -1,8 +1,8 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "50962a9dbecfbb7afd2af58c50c2f2f4"
-application_url = "https://tobacco-seeds-europe-rows.trycloudflare.com"
-embedded = true
+application_url = "http://localhost:3000"
+embedded = false
 name = "badge-app-remix"
 handle = "badge-app-remix"
 
@@ -27,9 +27,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://tobacco-seeds-europe-rows.trycloudflare.com/auth/callback",
-  "https://tobacco-seeds-europe-rows.trycloudflare.com/auth/shopify/callback",
-  "https://tobacco-seeds-europe-rows.trycloudflare.com/api/auth/callback"
+  "https://than-including-bali-interactions.trycloudflare.com/auth/callback",
+  "https://than-including-bali-interactions.trycloudflare.com/auth/shopify/callback",
+  "https://than-including-bali-interactions.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
