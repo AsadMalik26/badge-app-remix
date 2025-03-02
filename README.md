@@ -6,6 +6,18 @@ Rather than cloning this repo, you can use your preferred package manager and th
 
 Visit the [`shopify.dev` documentation](https://shopify.dev/docs/api/shopify-app-remix) for more details on the Remix app package.
 
+## Theme App Extension
+```shell
+shopify app generate extension
+````
+Type/Search: **Theme**
+
+Select: **Theme app extension**
+
+Write the name: ** < name of your choice e.g. popular-badge >**
+
+Enter the password of your store. Then it will configure host theme for your extension app
+
 ## Quick start
 
 ### Prerequisites
