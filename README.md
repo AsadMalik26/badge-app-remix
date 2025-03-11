@@ -22,6 +22,14 @@ deploy the extension app changes using:
 ```shell
 shopify app deploy
 ```
+
+Below command to run extension development with hot reload on the provided theme id
+```shell
+npm run dev -- --theme <theme id here e.g. 125621764159>
+```
+
+There should not be extra folders or files other than supported files e.g. react files in block folder. if there is then it will not deploye the app
+
 ## Quick start
 
 ### Prerequisites
