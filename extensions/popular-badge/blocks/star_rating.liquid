@@ -23,8 +23,15 @@
 
       //  this is the method of component
       addToWishlist() {
-        this.wishlisted = ! this.wishlisted
+        // this.wishlisted = ! this.wishlisted
       //   TODO: send data to the database
+      //   if customer is not logged in then show him an alert
+        {% unless customer %}
+          alert('Please login to add to the wishlist')
+          return
+        {% endunless %}
+
+        {{ shop.permanent_domain }}
       }
     }))
   })

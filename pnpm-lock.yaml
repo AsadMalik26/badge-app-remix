@@ -53,6 +53,9 @@ importers:
       react-dom:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
+      remix-utils:
+        specifier: ^8.4.0
+        version: 8.4.0(react@18.3.1)
       vite-tsconfig-paths:
         specifier: ^5.0.1
         version: 5.1.4(typescript@5.7.3)(vite@5.4.14(@types/node@22.13.5))
@@ -4058,6 +4061,39 @@ packages:
   remedial@1.0.8:
     resolution: {integrity: sha512-/62tYiOe6DzS5BqVsNpH/nkGlX45C/Sp6V+NtiN6JQNS1Viay7cWkazmRkrQrdFj2eshDe96SIQNIoMxqhzBOg==}
 
+  remix-utils@8.4.0:
+    resolution: {integrity: sha512-w/b2Qu1iLOcavKGF2+Zu0pg/n79B9O7EjqKHkJCFtDm4Gz79ofOwnX8T2A0RVI0sCoOq9Ds4NW72ZC9XGDj6LQ==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      '@edgefirst-dev/batcher': ^1.0.0
+      '@edgefirst-dev/server-timing': ^0.0.1
+      '@oslojs/crypto': ^1.0.1
+      '@oslojs/encoding': ^1.1.0
+      intl-parse-accept-language: ^1.0.0
+      is-ip: ^5.0.1
+      react: ^18.0.0 || ^19.0.0
+      react-router: ^7.0.0
+      zod: ^3.22.4
+    peerDependenciesMeta:
+      '@edgefirst-dev/batcher':
+        optional: true
+      '@edgefirst-dev/server-timing':
+        optional: true
+      '@oslojs/crypto':
+        optional: true
+      '@oslojs/encoding':
+        optional: true
+      intl-parse-accept-language:
+        optional: true
+      is-ip:
+        optional: true
+      react:
+        optional: true
+      react-router:
+        optional: true
+      zod:
+        optional: true
+
   remove-trailing-separator@1.1.0:
     resolution: {integrity: sha512-/hS+Y0u3aOfIETiaiirUFwDBDzmXPvO+jAfKTitUngIPzdKc6Z0LoFjM/CK5PL4C+eKwHohlHAb6H0VFfmmUsw==}
 
@@ -4512,6 +4548,10 @@ packages:
 
   type-fest@4.35.0:
     resolution: {integrity: sha512-2/AwEFQDFEy30iOLjrvHDIH7e4HEWH+f1Yl1bI5XMqzuoCUqwYCdxachgsgv0og/JdVZUhbfjcJAoHj5L1753A==}
+    engines: {node: '>=16'}
+
+  type-fest@4.37.0:
+    resolution: {integrity: sha512-S/5/0kFftkq27FPNye0XM1e2NsnoD/3FS+pBmbjmmtLT6I+i344KoOf7pvXreaFsDamWeaJX55nczA1m5PsBDg==}
     engines: {node: '>=16'}
 
   type-is@1.6.18:
@@ -9602,6 +9642,12 @@ snapshots:
 
   remedial@1.0.8: {}
 
+  remix-utils@8.4.0(react@18.3.1):
+    dependencies:
+      type-fest: 4.37.0
+    optionalDependencies:
+      react: 18.3.1
+
   remove-trailing-separator@1.1.0: {}
 
   remove-trailing-spaces@1.0.9: {}
@@ -10111,6 +10157,8 @@ snapshots:
   type-fest@0.21.3: {}
 
   type-fest@4.35.0: {}
+
+  type-fest@4.37.0: {}
 
   type-is@1.6.18:
     dependencies:
