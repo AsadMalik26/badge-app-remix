@@ -35,7 +35,7 @@ export async function loader({ request }) {
     message: "Success",
     data: wishlist,
   });
-
+  // return response
   return cors(request, response);
 
 }

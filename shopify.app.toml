@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "50962a9dbecfbb7afd2af58c50c2f2f4"
-application_url = "https://rapidly-smithsonian-puts-child.trycloudflare.com"
+application_url = "https://mileage-upset-succeed-position.trycloudflare.com"
 embedded = true
 name = "badge-app-remix"
 handle = "badge-app-remix"
@@ -27,9 +27,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://rapidly-smithsonian-puts-child.trycloudflare.com/auth/callback",
-  "https://rapidly-smithsonian-puts-child.trycloudflare.com/auth/shopify/callback",
-  "https://rapidly-smithsonian-puts-child.trycloudflare.com/api/auth/callback"
+  "https://mileage-upset-succeed-position.trycloudflare.com/auth/callback",
+  "https://mileage-upset-succeed-position.trycloudflare.com/auth/shopify/callback",
+  "https://mileage-upset-succeed-position.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
