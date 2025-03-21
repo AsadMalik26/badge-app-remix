@@ -8,9 +8,10 @@ import styles from "./styles.module.css";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   const url = new URL(request.url);
-
-  if (url.searchParams.get("shop")) {
-    throw redirect(`/app?${url.searchParams.toString()}`);
+    console.log(url, 'url here', url.searchParams)
+  const shop =  url.searchParams.get("shop") || "test-hydrogen-asad.myshopify.com";
+  if (shop) {
+    throw redirect(`/app?${shop}`);
   }
 
   return { showForm: Boolean(login) };

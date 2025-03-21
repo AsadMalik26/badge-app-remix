@@ -17,12 +17,14 @@ import { TitleBar, useAppBridge } from "@shopify/app-bridge-react";
 import { authenticate } from "../shopify.server";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
-  await authenticate.admin(request);
+  console.log('admin request', request);
+  // await authenticate.admin(request);
 
-  return null;
+  return true;
 };
 
 export const action = async ({ request }: ActionFunctionArgs) => {
+  console.log('admin action', request);
   const { admin } = await authenticate.admin(request);
   const color = ["Red", "Orange", "Yellow", "Green"][
     Math.floor(Math.random() * 4)
