@@ -90,6 +90,7 @@ export async function action({ request }) {
       });
 
       response = json({message: "Product removed from your wishlist", method: _action, wishlisted: false});
+      // return response;
       return cors(request, response);
 
     default:

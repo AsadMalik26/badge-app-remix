@@ -1,6 +1,6 @@
 {% comment %}using x-data: you define the component{% endcomment %}
 <div class="wishlist-inspire__icon" x-data="wishlist">
-  <button type="button" @click="addToWishlist()">
+  <button type="button" @click.debounce="addToWishlist()">
     {% comment %}:fill - here colon before property defines it will be dynamic so it can take value of variable "wishlisted" to assign the value{% endcomment %}
     <svg
       class="wishlist-inspire__icon--svg"
@@ -23,11 +23,11 @@
   document.addEventListener('alpine:init', () => {
     // Alpine.data: this is how you create a component - here "wishlist" is the name of component
     Alpine.data('wishlist', () => ({
-      BASE_URL: 'https://mileage-upset-succeed-position.trycloudflare.com/',
+      BASE_URL: 'https://infections-pix-seas-renewal.trycloudflare.com/',
+      {% comment %} BASE_URL: '{{ shop.metafields.badge_app.application_url }}', {% endcomment %}
       wishlisted: false, // this is the variable
 
       init(){
-        console.log("Init here")
         const formdata = new FormData();
         formdata.append("shop", "{{ shop.permanent_domain }}");
         formdata.append("customerId", '{{ customer.id }}');
@@ -45,6 +45,8 @@
             console.log({result}, 'init result')
             if(result?.data?.length){
               this.wishlisted = true
+            } else {
+              this.wishlisted = false
             }
           })
           .catch((error) => console.error(error));
@@ -66,7 +68,9 @@
         formdata.append("shop", "{{ shop.permanent_domain }}");
         formdata.append("customerId", '{{ customer.id }}');
         formdata.append("productId", "{{ product.id }}");
-
+        if(this.wishlisted){
+          formdata.append("_action", "DELETE");
+        }
         const requestOptions = {
           method: "POST",
           body: formdata,
@@ -76,8 +80,7 @@
         fetch(this.BASE_URL + "api/wishlist/", requestOptions)
           .then((response) => response.json())
           .then((result) => {
-            console.log({result})
-            this.wishlisted = true
+            this.wishlisted = result?.wishlisted ?? false;
           })
           .catch((error) => console.error(error));
       },
